@@ -14,17 +14,17 @@ A safe, well-tested partial implementation can score better than a broad impleme
 
 ## AI Tool Policy
 
-You may use coding agents, LLMs, documentation, search, and normal development tools.
+You may use coding agents, LLMs, documentation, search, and normal development tools. Effective AI use in this exercise means retaining control of the engineering process: framing the problem, setting constraints, checking assumptions, verifying results, correcting invalid output, and owning the submitted behavior.
 
-Include a short `AI_USE.md` stating:
+Include a short `AI_USE.md` using [AI_USE_TEMPLATE.md](./AI_USE_TEMPLATE.md). It must state:
 
 - the tools and models you used;
-- what work you delegated;
-- at least one suggestion or output you rejected, corrected, or independently verified;
-- the validation commands you ran;
-- any AI-generated behavior you did not have time to verify.
+- what you delegated and the constraints or acceptance criteria you provided;
+- at least one material suggestion or output you accepted, rejected, or corrected, and the evidence behind that decision;
+- the exact validation commands you ran and whether they passed;
+- any AI-generated behavior you did not verify.
 
-Do not include private chain-of-thought. We evaluate decisions, understanding, and verification evidence—not prompt-writing style or generated-code volume.
+Do not include private chain-of-thought or a raw conversation transcript. We evaluate observable decisions, understanding, and verification evidence—not prompt length, prompt count, model choice, or generated-code volume.
 
 ## Scenario
 
@@ -118,12 +118,21 @@ Submit your implementation, backend and frontend tests, updated run instructions
 | Scope and engineering judgment | 15% |
 | AI-use discipline and communication | 5% |
 
+The take-home score evaluates the delivered engineering artifact. It does not by itself establish who understood or controlled the work. Every candidate who passes the take-home must separately pass the AI-control verification below; a high implementation score cannot compensate for failing that verification.
+
 ## Automatic Failure Conditions
 
 A submission does not pass if verified behavior shows that the backend trusts browser-supplied identity or authorization, an unauthorized user can decide a request, contradictory terminal states can commit, state and successful history disagree, the UI presents false success, negative tests were weakened merely to pass, or critical failing behavior is knowingly presented as complete.
 
 An incomplete feature is not an automatic failure when the implemented path is correct, testable, and honestly described.
 
-## Follow-Up Discussion
+## Mandatory AI-Control Verification
 
-Candidates passing the screen will trace a decision end to end, discuss a remaining risk, respond to a small retry/permission/concurrency change, and improve a bounded part of their submission. The goal is to evaluate understanding, verification habits, and safe adaptation—not typing speed.
+Candidates passing the take-home complete a consistent 45-minute technical verification before entering the main interview loop. Expect to:
+
+- trace a critical path in your submission without consulting AI;
+- use an AI tool to review a previously unseen, plausibly generated code change;
+- use AI while responding to a small randomized retry, permission, concurrency, transaction, or frontend-state change;
+- explain what the tool got wrong, what evidence you used, and what remains unverified.
+
+You may choose any reasonably available AI coding tool. We evaluate problem framing, context selection, verification, correction, and ownership—not typing speed or allegiance to a particular product. The review patch and change scenario are selected after submission and enforce only the published business rules.

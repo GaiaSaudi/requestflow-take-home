@@ -6,6 +6,8 @@ The repository is intentionally incomplete. It contains realistic defects in the
 
 Read [ASSIGNMENT.md](./ASSIGNMENT.md) before making changes.
 
+The hiring process permits AI-assisted development and includes a separate mandatory verification of understanding, review judgment, and safe AI steering. The submitted repository is evaluated as an engineering artifact; model choice and generated-code volume are not hiring signals.
+
 ## Start The Application
 
 Requirements:
