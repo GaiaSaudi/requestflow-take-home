@@ -11,5 +11,6 @@ backend/.coverage
 frontend/.next/
 frontend/coverage/
 frontend/node_modules/
+frontend/next-env.d.ts
 frontend/*.tsbuildinfo
 npm-debug.log*
