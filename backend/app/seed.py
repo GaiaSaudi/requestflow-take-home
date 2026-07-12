@@ -105,7 +105,6 @@ def seed() -> None:
         db.add_all(requests)
         db.add(
             DecisionHistory(
-                id=1,
                 request_id=3,
                 actor_id=2,
                 decision="approved",
